@@ -52,11 +52,11 @@ void handle_signal_int(int sig)
 /**
  * build a text/plain content of the specified length
  */
-void build_content(char * p, int n)
+void build_content(char * p, size_t n)
 {
 	char line_buffer[80];
-	int k;
-	int i = 0;
+	size_t k;
+	size_t i = 0;
 
 	while(n > 0) {
 		k = snprintf(line_buffer, sizeof(line_buffer),
