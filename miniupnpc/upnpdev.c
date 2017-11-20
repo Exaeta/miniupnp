@@ -12,9 +12,10 @@
  * free the chained list returned by upnpDiscover() */
 void freeUPNPDevlist(struct UPNPDev * devlist)
 {
-	struct UPNPDev * next;
+	
 	while(devlist)
 	{
+		struct UPNPDev * next;
 		next = devlist->pNext;
 		free(devlist);
 		devlist = next;
