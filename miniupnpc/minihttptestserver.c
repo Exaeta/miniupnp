@@ -81,15 +81,17 @@ void build_content(char * p, int n)
 /**
  * build crappy content
  */
-void build_crap(char * p, int n)
+void build_crap(char * p, size_t n)
 {
 	static const char crap[] = "_CRAP_\r\n";
-	int i;
+	size_t i;
 
 	while(n > 0) {
 		i = sizeof(crap) - 1;
 		if(i > n)
+		{
 			i = n;
+		}
 		memcpy(p, crap, i);
 		p += i;
 		n -= i;
